@@ -1,0 +1,110 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+.navbar {
+  height: 78px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.2rem;
+
+  padding: 10 7vw;       
+}
+
+
+@media (max-width: 1440px) {
+  .navbar{ 
+  height: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar{ 
+  height: px;
+  }
+}
+
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+.catalog-button {
+  margin-left: 2vw;
+  background-color: #70C05B;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  text-decoration: none; 
+  transition: 0.3s
+}
+
+.catalog-button:hover { 
+  background-color: #5fae4c;
+}
+
+.catalog-text-button { 
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: nowrap; 
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+  font-size: 1.1rem;
+}
+
+.nav-item:hover {
+  color: green;
+}
+
+.user-profile {
+  margin-left: 1.5vw;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.avatar {
+  border-radius: 50%;
+}
+
+.username {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-left: 12px;
+}
+
+.arrow {
+  margin-left: 5px;
+}

@@ -1,0 +1,72 @@
+.footer {
+  display: flex;
+  height: 72px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: #f5f0e6; /* бежевый фон */
+  padding: 0 50;
+  
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+}
+
+.footer-left {
+  display: flex;
+  gap: 20px;
+  min-width: 200px;
+  margin: auto 0;
+}
+
+.footer-links { 
+    display: flex;
+    gap: 50px;
+    margin: auto 0;
+}
+
+.footer-links a {
+  display: block;
+  color: #333;
+  text-decoration: none;
+  font-size: 12px;
+
+  margin: 2px 0;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: #32CD32;
+}
+
+.footer-right {
+  display: flex;
+  gap: 50px;
+    margin: auto 0;
+}
+
+.social-icons {
+  display: flex;
+  gap: 25px;
+}
+
+.social-icons .icon {
+  font-size: 20px;
+  color: #333;
+  transition: color 0.2s;
+}
+
+.social-icons .icon:hover {
+  color: #32CD32;
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    color: #333;
+}
+

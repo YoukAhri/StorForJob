@@ -1,0 +1,346 @@
+.product-page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+
+/* строчка с путём страниц */
+.src_network { 
+    padding: 25 7vw;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Большое название страница - Поиск */
+.main_page_search_text { 
+    padding: 0 7vw;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-top: 0px;
+}
+
+/* Миниатюры */
+.mini-image { 
+    object-fit: contain;
+    cursor: pointer;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+/* Большая пикча */
+.main-image {
+    width: 420px;
+    height: 420px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Блок с артикулом, отзывами и т.д. */
+.info_block_1 { 
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    font-size: 0.9rem;
+    padding: 0 7vw;
+    align-items: center;
+}
+
+.info-block-func {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Кнопка поделиться */
+.share-btn {
+    position: relative;
+    padding: 8px 16px;
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.share-btn span{ 
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    
+}
+
+/* Текст скопирован */
+.copied-text { 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(125, 125, 125, 0.9);
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.copied-text.show {
+    opacity: 1;
+}
+
+
+
+.product-info { 
+    max-width: 21vw;
+}
+
+.products-text1 { 
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+.prices1 {
+  display: flex;
+  justify-content: space-between;
+  width: 21vw;
+  height: 60px;
+}
+
+/* Цена с картой */
+.price-discount1 {
+  font-weight: 700;
+  font-size: 35px;
+  text-align: right
+}
+
+/* Цена с обычная */
+.price-main1 {
+  font-weight: 400;
+  font-size: 24px;
+}
+
+/* Подпись с картой или без */
+.price-sub1 {
+  font-size: 14px;
+  color: gray;
+  
+}
+
+.button_basket { 
+    width: 100%;
+    height: 70px;
+    background-color: #FF6633;
+    border: 0px;
+    border-radius: 6px;  
+
+    display: flex;
+}
+
+.button_basket span { 
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    color: #fff;
+}
+
+.bonus { 
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #70C05B;
+    gap: 14px;
+    padding: 10px;
+}
+
+.price-notification { 
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 10px;
+}
+
+
+
+
+
+.product-specs {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    width: 100%;
+    border-radius: 3px;
+    overflow: hidden;
+    font-size: 14px;
+    color: #333;
+}
+
+.spec-row { 
+    display: flex;
+    width: 100%;
+    padding: 8px 12px;
+    background: #eeeeee;
+}
+
+.spec-row:nth-child(even) {
+  background: #ffffff;
+}
+
+.spec-left {
+  flex: 1;
+}
+
+.spec-right {
+  flex: 1;
+  font-weight: 700;
+  margin-left: 40px;
+}
+
+
+
+/* С ЭТИМ ТОВАРОМ ПОКУПАЮТ */
+
+/* Сетка товаров */
+.products-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, max-content));
+gap: 30px;
+padding: 20px;
+justify-content: center; /* центрирует все колонки */
+
+width: 80vw;
+margin: 50px auto;
+}
+
+/* Карточка товара */
+.product-card {
+border-radius: 12px;
+overflow: hidden;
+display: flex;
+flex-direction: column;
+background: #fff;
+width: 272px;
+box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Пикча товара */
+.image-container {
+position: relative;
+height: 250px;
+overflow: hidden;
+margin: 20px 0;
+}
+
+.image-container-img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+display: block;
+}
+
+/* Скидка на товар */
+.discount {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  background: #FF6633;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+
+/* добавить в избранное */
+.like {
+  position: absolute;
+  top: 0px;
+  right: 8px;
+  color: red;
+  cursor: pointer;
+}
+
+/* блок текстовый к товару */
+.product-info {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Шрифт для всех текстов */
+.products-text { 
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+.prices {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Цена с картой */
+.price-discount {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+/* Цена обынчая */
+.price-main {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+/* Подпись с картой или без */
+.price-sub {
+  font-size: 12px;
+  color: gray;
+}
+
+/* Описание товара */
+.product-text {
+  font-size: 14px;
+  color: #333;
+}
+
+/* Оценка товара */
+.rating {
+  display: flex;
+  gap: 5px;
+}
+
+/* Кнопка добавить в избранное */
+.add-to-cart {
+  margin-top: 8px;
+  padding: 10px;
+  border: 1px solid #32CD32;
+  border-radius: 6px;
+  background-color: white;
+  color: #32CD32; 
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.add-to-cart:hover {
+  background-color: #32CD32;
+  color: white;   
+}

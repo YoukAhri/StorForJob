@@ -1,0 +1,180 @@
+"use client";
+
+
+
+import Image from "next/image";
+import Link from "next/link"; 
+import "./main_page.css"
+
+export default function Home() {
+  return (
+    <>
+      <div className="src_network">
+          <span>Главная</span>
+          <Image src="/stroke_right.svg" alt="" width={24} height={24} />
+          <span style={{ color: "rgb(150, 150, 150)"}}>Поиск</span>
+      </div>
+
+      <h1 className="main_page_search_text">Поиск</h1>
+
+    <div className="search-container">
+      <input type="text" placeholder="Найти товар" /> 
+      <Image src="/search.svg" className="search-icon" alt="" width={30} height={30} />
+    </div>
+
+
+<div className="products-grid">
+  {[1,2,3,4,5,6,7,8,9,].map((item) => (
+    <div className="product-card" key={item}>
+
+      <Link href="/products">
+        <div className="image-container">
+          <img src="/pic1.png" alt="Товар" />
+          <span className="discount ">-50%</span>
+          <Image src="/favorite.svg" alt="" className="like" width={34} height={34}/>
+        </div>
+      </Link>
+
+      <div className="product-info">
+        <div className="prices">
+          <div>
+            <div className="products-text price-discount">44,50 ₽</div>
+            <div className="products-text price-sub">С картой</div>
+          </div>
+          <div>
+            <div className="products-text price-main">50,50 ₽</div>
+            <div className="products-text price-sub">Обычная</div>
+          </div>
+        </div>
+
+        <div className="product-text products-text">
+          Колбаса сырокопченая МЯСНАЯ ИСТОРИЯ Сальчичон и Тоскан...
+        </div>
+
+        <div className="rating">
+          <img src="/star1.svg" alt="" />
+          <img src="/star1.svg" alt="" />
+          <img src="/star1.svg" alt="" />
+          <img src="/star0.svg" alt="" />
+          <img src="/star0.svg" alt="" />
+
+        </div>
+        <button className="add-to-cart products-text">В корзину</button>
+      </div>
+    </div>
+  ))}
+</div>
+
+
+
+    </>
+  );
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"use client";
+
+import { useEffect, useState } from "react";
+import Image from "next/image";
+import Link from "next/link"; 
+import "./main_page.css"
+
+export default function Home() {
+  const [products, setProducts] = useState<any[]>([]);
+
+  useEffect(() => {
+    fetch("https://dummyjson.com/products?limit=30") // запрос апи на 30 товаров
+      .then(res => res.json()) // превращаю запрос в json
+      .then(data => setProducts(data.products))
+      .catch(err => console.error(err));
+  }, []);
+
+  return (
+    <>
+      <div className="src_network">
+          <span>Главная</span>
+          <Image src="/stroke_right.svg" alt="" width={24} height={24} />
+          <span style={{ color: "rgb(150, 150, 150)"}}>Поиск</span>
+      </div>
+
+      <h1 className="main_page_search_text">Поиск</h1>
+
+      <div className="search-container">
+        <input type="text" placeholder="Найти товар" /> 
+        <Image src="/search.svg" className="search-icon" alt="" width={30} height={30} />
+      </div>
+
+      <div className="products-grid">
+        {products.map((product) => ( // начало отрисовки карточек
+          <div className="product-card" key={product.id}>
+            <Link href={`/products/${product.id}`}>
+              <div className="image-container">
+                <img src={product.thumbnail} alt={product.title} className="image-container-img"/>
+                <span className="discount">-{Math.round(product.discountPercentage)}%</span>
+                <Image src="/favorite.svg" alt="" className="like" width={34} height={34}/>
+              </div>
+            </Link>
+
+            <div className="product-info">
+              <div className="prices">
+                <div>
+                  <div className="products-text price-discount">
+                    {Math.round(product.price * (1 - product.discountPercentage / 100))} ₽
+                  </div>
+                  <div className="products-text price-sub">С картой</div>
+                </div>
+                <div>
+                  <div className="products-text price-main">{product.price} ₽</div>
+                  <div className="products-text price-sub">Обычная</div>
+                </div>
+              </div>
+
+              <div className="product-text products-text">
+                {product.title} — {product.description.substring(0, 50)}...
+              </div>
+              
+              <div className="rating">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <img
+                    key={i}
+                    src={i < Math.round(product.rating) ? "/star1.svg" : "/star0.svg"}
+                    alt=""
+                  />
+                ))}
+              </div>
+              <button className="add-to-cart products-text">В корзину</button>
+            </div>
+          </div>
+        ))}
+      </div>
+    </>
+  );
+}
