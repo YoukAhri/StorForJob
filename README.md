@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# StorForJob
 
-## Getting Started
+Проект на [Next.js](https://nextjs.org), созданный с помощью [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-First, run the development server:
+## Начало работы
+
+### Установка зависимостей
+Сначала установите зависимости через npm:
+
+```bash
+npm install
+```
+
+### Запуск локального сервера
+Для разработки запустите сервер:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
+## Нужные команды
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- `npm run dev` — запуск сервера разработки  
+- `npm run build` — сборка проекта
+- `npm start` — запуск собранного проекта  
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Откройте [http://localhost:3000](http://localhost:3000) в браузере, чтобы увидеть результат.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Структура проекта
 
-To learn more about Next.js, take a look at the following resources:
+- `public/` – статические файлы (иконки, изображения)
+- `src/app/` – основная логика приложения и страницы
+- `src/components/` – переиспользуемые компоненты (Header / Footer)
+- `package.json` – зависимости и скрипты
+- `next.config.js` – конфигурация Next.js
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Используемые технологии
 
-## Deploy on Vercel
+- [Next.js](https://nextjs.org) – React-фреймворк для рендеринга на сервере
+- [HeroUI](https://www.npmjs.com/package/@heroui/react) – библиотека компонентов для Navbar, Footer
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Развёртка проекта 
+
+Самый простой способ развернуть проект — [Vercel](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme).  
+Подробности о деплое можно найти в [документации Next.js](https://nextjs.org/docs/app/building-your-application/deploying).
