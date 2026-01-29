@@ -155,15 +155,15 @@ const relatedProducts: any[] = product?.relatedProducts || [];
                 <div className="product-specs">
                   <div className="spec-row">
                     <div className="spec-left">Бренд</div>
-                    <div className="spec-right">Простоквашино</div>
+                    <div className="spec-right">{product.brand}</div>
                   </div>
                   <div className="spec-row">
-                    <div className="spec-left">Страна производителя</div>
-                    <div className="spec-right">Россия</div>
+                    <div className="spec-left">Категория</div>
+                    <div className="spec-right">{product.category}</div>
                   </div>
                   <div className="spec-row">
-                    <div className="spec-left">Упаковка</div>
-                    <div className="spec-right">180г</div>
+                    <div className="spec-left">Колличество</div>
+                    <div className="spec-right">{product.stock}</div>
                   </div>
                 </div>
         </div>
