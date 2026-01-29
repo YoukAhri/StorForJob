@@ -55,39 +55,39 @@ html, body {
 
 /* Сетка товаров */
 .products-grid {
-display: grid;
-grid-template-columns: repeat(auto-fill, minmax(250px, max-content));
-gap: 30px;
-padding: 20px;
-justify-content: center; /* центрирует все колонки */
-width: 80vw;
-margin: 50px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, max-content));
+  gap: 30px;
+  padding: 20px;
+  justify-content: center; 
+  width: 80vw;
+  margin: 50px auto;
 }
 
 /* Карточка товара */
 .product-card {
-border-radius: 12px;
-overflow: hidden;
-display: flex;
-flex-direction: column;
-background: #fff;
-width: 272px;
-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  width: 272px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Пикча товара */
 .image-container {
-position: relative;
-height: 250px;
-overflow: hidden;
-margin: 20px 0;
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+  margin: 20px 0;
 }
 
 .image-container-img {
-width: 100%;
-height: 100%;
-object-fit: cover;
-display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 /* Скидка на товар */
@@ -120,6 +120,8 @@ display: block;
   display: flex;
   flex-direction: column;
   gap: 8px;
+  position: relative;
+  height: 100%;
 }
 
 /* Шрифт для всех текстов */
@@ -166,7 +168,7 @@ display: block;
 
 /* Кнопка добавить в избранное */
 .add-to-cart {
-  margin-top: 8px;
+  margin-top: auto;
   padding: 10px;
   border: 1px solid #32CD32;
   border-radius: 6px;
